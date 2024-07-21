@@ -1,15 +1,95 @@
 package setup;
 
-public interface Implementation {
+import sorting.Sorting;
 
-    void swap(State[] arr, int i, int j);
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
-    void highlightSwap(State[] arr, int i, int j);
+public abstract class Implementation implements Sorter {
 
-    void compareAndHighlight(State[] arr, int i, int j);
+    private List<ChangeListener> listeners;
+    private int[] values;
+    private State state = State.Waiting;
+    private List<Integer> activeIndices;
 
-    void setComparingRange(State[] arr, int start, int end);
+    public Implementation(int[] values) {
+        this.values = values;
+        listeners = new ArrayList<>(25);
+        activeIndices = new ArrayList<>(2);
+    }
 
-    void resetColors(State[] arr);
+    @Override
+    public State getState() {
+        return state;
+    }
 
+    public void setState(State value) {
+        if (value != state) {
+            state = value;
+            fireStateChanged();
+        }
+    }
+
+    @Override
+    public int[] getValues() {
+        return values;
+    }
+
+    @Override
+    public void addChangeListener(ChangeListener listener) {
+        listeners.add(listener);
+    }
+
+    @Override
+    public void removeChangeListener(ChangeListener listener) {
+        listeners.remove(listener);
+    }
+
+    public void fireStateChanged() {
+        if (!listeners.isEmpty()) {
+            ChangeEvent evt = new ChangeEvent(this);
+            listeners.forEach(listener -> listener.stateChanged(evt));
+        }
+    }
+
+    protected void fireWhileSwapping() {
+        Sorting.count += 1;
+        try {
+            Timer timer = new Timer();
+            SwingUtilities.invokeAndWait(() -> timer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    fireStateChanged();
+                }
+            }, 0));
+        } catch (InterruptedException | InvocationTargetException exp) {
+            exp.printStackTrace();
+        }
+    }
+
+    @Override
+    public boolean isActiveIndex(int index) {
+        return activeIndices.contains(index);
+    }
+
+    private void setActiveIndices(int lower, int upper) {
+        activeIndices.clear();
+        activeIndices.add(lower);
+        activeIndices.add(upper);
+        fireStateChanged();
+    }
+
+    public void swap(int[] anArrayOfInt, int i, int j) {
+        setActiveIndices(i, j);
+        int x = anArrayOfInt[i];
+        anArrayOfInt[i] = anArrayOfInt[j];
+        anArrayOfInt[j] = x;
+        fireStateChanged();
+    }
 }

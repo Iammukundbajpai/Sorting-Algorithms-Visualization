@@ -1,0 +1,11 @@
+F:\SortingAlgorithmVisualizer\src\frames\Author.java
+F:\SortingAlgorithmVisualizer\src\frames\MyPanel.java
+F:\SortingAlgorithmVisualizer\src\frames\Visualiser.java
+F:\SortingAlgorithmVisualizer\src\setup\Implementation.java
+F:\SortingAlgorithmVisualizer\src\setup\Sorter.java
+F:\SortingAlgorithmVisualizer\src\setup\State.java
+F:\SortingAlgorithmVisualizer\src\sorting\BubbleSort.java
+F:\SortingAlgorithmVisualizer\src\sorting\InsertionSort.java
+F:\SortingAlgorithmVisualizer\src\sorting\MergeSort.java
+F:\SortingAlgorithmVisualizer\src\sorting\SelectionSort.java
+F:\SortingAlgorithmVisualizer\src\sorting\Sorting.java

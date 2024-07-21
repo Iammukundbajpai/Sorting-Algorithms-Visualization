@@ -22,4 +22,4 @@ This project is a Java-based sorting algorithm visualizer that helps students un
 
 ## Author
 
-[Your Name] ([Your Email])
+[Mukund Bajpai] ([mknd.bajpai@gmail.com])
