@@ -16,10 +16,10 @@ This project is a Java-based sorting algorithms visualizer that helps to underst
 ## How to Run
 
 1. Ensure you have Java Development Kit (JDK) installed on your system.
-2. Clone this repository: git clone https://github.com/Iammukundbajpai/Sorting-Algorithms-Visualization.git
-3. Navigate to the project directory: cd SortingAlgorithmVisualizer
-4. Compile the Java files: dir /s /B *.java > sources.txt & javac -d . @sources.txt
-5. Run the Visualiser class: java frames.Visualiser
+2. Clone this repository: ```git clone https://github.com/Iammukundbajpai/Sorting-Algorithms-Visualization.git```
+3. Navigate to the project directory: ```cd SortingAlgorithmVisualizer```
+4. Compile the Java files: ```dir /s /B *.java > sources.txt & javac -d . @sources.txt```
+5. Run the Visualiser class: ```java frames.Visualiser```
 
 ## Usage
 
