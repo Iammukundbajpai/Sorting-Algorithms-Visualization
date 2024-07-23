@@ -24,6 +24,8 @@ This project is a Java-based sorting algorithms visualizer that helps to underst
 # Samples
 
 - Sample (Merge Sort)
+
+
 ![](images/Flashback-Jul22202406_02_51-ezgif.com-video-to-gif-converter.gif)
 
 ## Usage
