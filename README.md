@@ -36,17 +36,6 @@ This project is a Java-based sorting algorithms visualizer that helps to underst
 4. A new window will open showing the sorting process in real-time.
 5. Close the sorting window to return to the main menu and choose another algorithm.
 
-## Project Structure
-
-- `frames` package:
-- `Visualiser.java`: Main class that sets up the GUI and handles user interactions
-- `sorting` package (contains sorting algorithm implementations):
-- `BubbleSort.java`
-- `SelectionSort.java`
-- `InsertionSort.java`
-- `MergeSort.java`
-- `Sorting.java`: Likely contains utility methods for sorting operations
-
 ## Author
 
 Mukund Bajpai (mknd.bajpai@gmail.com)
