@@ -21,6 +21,11 @@ This project is a Java-based sorting algorithms visualizer that helps to underst
 4. Compile the Java files: ```dir /s /B *.java > sources.txt & javac -d . @sources.txt```
 5. Run the Visualiser class: ```java frames.Visualiser```
 
+# Samples
+
+- Sample (Merge Sort)
+![](images/Flashback-Jul22202406_02_51-ezgif.com-video-to-gif-converter.gif)
+
 ## Usage
 
 1. When you run the program, you'll see a window with four buttons, each representing a different sorting algorithm.
